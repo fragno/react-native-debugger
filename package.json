@@ -1,9 +1,9 @@
 {
-  "name": "react-native-debugger",
-  "version": "0.7.18",
-  "productName": "React Native Debugger In Dev",
+  "name": "@alipay/appx-native-debugger",
+  "version": "0.0.1",
+  "productName": "Appx Native Debugger In Dev",
   "description":
-    "The standalone app for React Native Debugger, with React DevTools / Redux DevTools",
+    "The standalone app for Appx Native Debugger, with Appx DevTools",
   "main": "electron/main.js",
   "scripts": {
     "pack-macos": "npm run build && ./scripts/package-macos.sh",
@@ -20,7 +20,7 @@
     "build": "npm run build:main && npm run build:renderer",
     "dev:webpack": "webpack-dev-server --config webpack/renderer.dev.babel.js",
     "dev:electron":
-      "cross-env NODE_ENV=development electron -r babel-core/register -r ./electron/debug .",
+      "cross-env NODE_ENV=development electron --remote-debugging-port=9223 -r babel-core/register -r ./electron/debug .",
     "lint": "eslint .",
     "test": "jest __tests__",
     "test-e2e": "jest __e2e__ --forceExit",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jhen0409/react-native-debugger.git"
+    "url": "git+https://gitlab.alipay-inc.com:appx/appx-devtools.git"
   },
   "author": "Jhen <developer@jhen.me>",
   "license": "MIT",

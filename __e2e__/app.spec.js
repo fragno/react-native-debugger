@@ -56,7 +56,7 @@ describe('Application launch', () => {
     await client.waitUntilWindowLoaded();
     await delay(2000);
     const title = await browserWindow.getTitle();
-    expect(title).toBe('React Native Debugger - Attempting reconnection (port 8081)');
+    expect(title).toBe('Appx Native Debugger - Attempting reconnection (port 8081)');
   });
 
   it('should portfile (for debugger-open usage) always exists in home dir', async () => {
@@ -89,9 +89,9 @@ describe('Application launch', () => {
     expect(val).toBe('');
   });
 
-  it('should show waiting message on React DevTools', async () => {
+  it('should show waiting message on Appx DevTools', async () => {
     const { client } = app;
-    const exist = await client.isExisting('//h2[text()="Waiting for React to connect…"]');
+    const exist = await client.isExisting('//h2[text()="Waiting for Appx to connect…"]');
     expect(exist).toBe(true);
   });
 
@@ -110,7 +110,7 @@ describe('Application launch', () => {
     expect(url).toBe('/debugger-proxy?role=debugger&name=Chrome');
 
     const title = await app.browserWindow.getTitle();
-    expect(title).toBe('React Native Debugger - Waiting for client connection (port 8081)');
+    expect(title).toBe('Appx Native Debugger - Waiting for client connection (port 8081)');
     server.close();
     wss.close();
   });
@@ -143,7 +143,7 @@ describe('Application launch', () => {
 
     const title = await app.browserWindow.getTitle();
     expect(title).toBe(
-      `React Native Debugger - Waiting for client connection (port ${customRNServerPort})`
+      `Appx Native Debugger - Waiting for client connection (port ${customRNServerPort})`
     );
     server.close();
     wss.close();
@@ -201,7 +201,7 @@ describe('Application launch', () => {
         });
       });
       const title = await app.browserWindow.getTitle();
-      expect(title).toBe(`React Native Debugger - Connected (port ${customRNServerPort})`);
+      expect(title).toBe(`Appx Native Debugger - Connected (port ${customRNServerPort})`);
     });
 
     afterAll(() => {

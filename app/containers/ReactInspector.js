@@ -153,7 +153,7 @@ export default class ReactInspector extends Component {
     return (
       <div id={containerId} style={styles.container}>
         <div id="waiting">
-          <h2>{'Waiting for React to connect…'}</h2>
+          <h2>{'Waiting for Appx to connect…'}</h2>
           <h5 style={styles.tip}>
             {"If you're using a real device, ensure you have read the "}
             <span style={styles.link} onClick={this.handleDocLinkClick}>

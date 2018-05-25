@@ -68,8 +68,7 @@ export default ({ iconPath }) => [
     viewItems.concat([
       item('Toggle Full Screen', 'F11', () => toggleFullscreen(getWin())),
       item('Toggle Developer Tools', 'Alt+Ctrl+I', () => toggleDevTools(getWin(), 'chrome')),
-      item('Toggle React DevTools', 'Alt+Ctrl+J', () => toggleDevTools(getWin(), 'react')),
-      item('Toggle Redux DevTools', 'Alt+Ctrl+K', () => toggleDevTools(getWin(), 'redux')),
+      item('Toggle Appx-Native DevTools', 'Alt+Ctrl+J', () => toggleDevTools(getWin(), 'react')),
       separator,
       item('Zoom In', 'Ctrl+=', () => zoom(getWin(), 1)),
       item('Zoom Out', 'Ctrl+-', () => zoom(getWin(), -1)),
@@ -78,13 +77,10 @@ export default ({ iconPath }) => [
   ),
   menu('Help', [
     item('Documentation', n, () =>
-      shell.openExternal('https://github.com/jhen0409/react-native-debugger/tree/master/docs')
+      shell.openExternal('https://site.alipay.net/appx/af-appx-native/')
     ),
     item('Issues', n, () =>
-      shell.openExternal('https://github.com/jhen0409/react-native-debugger/issues')
-    ),
-    item('Open Collective', n, () =>
-      shell.openExternal('https://opencollective.com/react-native-debugger')
-    ),
+      shell.openExternal('http://gitlab.alipay-inc.com/appx/af-appx-native/issues')
+    )
   ]),
 ];

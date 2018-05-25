@@ -24,7 +24,7 @@ export default (icon, notify) => {
       dialog.showMessageBox({
         type: 'info',
         buttons: ['OK'],
-        title: 'React Native Debugger',
+        title: 'Appx Native Debugger',
         icon,
         message: err.message,
       });
@@ -41,7 +41,7 @@ export default (icon, notify) => {
       const index = dialog.showMessageBox({
         type: 'info',
         buttons: ['Download', 'Later'],
-        title: 'React Native Debugger',
+        title: 'Appx Native Debugger',
         icon,
         message: 'A newer version is available.',
       });
@@ -63,7 +63,7 @@ export default (icon, notify) => {
     const index = dialog.showMessageBox({
       type: 'info',
       buttons: ['Restart', 'Later'],
-      title: 'React Native Debugger',
+      title: 'Appx Native Debugger',
       icon,
       message: 'The newer version has been downloaded. ' +
         'Please restart the application to apply the update.',

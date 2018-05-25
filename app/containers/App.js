@@ -131,12 +131,8 @@ export default class App extends Component {
   background = (
     <div style={styles.wrapBackground}>
       <div style={styles.text}>
-        <kbd style={styles.shortcut}>{`${shortcutPrefix}K`}</kbd>
-        {' to toggle Redux DevTools'}
-      </div>
-      <div style={styles.text}>
         <kbd style={styles.shortcut}>{`${shortcutPrefix}J`}</kbd>
-        {' to toggle React DevTools'}
+        {' to toggle Appx DevTools'}
       </div>
     </div>
   );
@@ -161,7 +157,7 @@ export default class App extends Component {
     return (
       <div style={styles.wrapBackground}>
         <FormInput
-          title={'Type in another React Native packager port'}
+          title={'Type in another Appx Native packager port'}
           button="Confirm"
           inputProps={{
             type: 'input',

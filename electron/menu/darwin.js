@@ -26,7 +26,7 @@ const viewItems =
     : [];
 
 export default ({ iconPath }) => [
-  menu('React Native Debugger', [
+  menu('Appx Native Debugger', [
     item('About', n, () => showAboutDialog(iconPath)),
     item('Check for Updates...', n, () => checkUpdate(iconPath, true)),
     separator,
@@ -76,8 +76,7 @@ export default ({ iconPath }) => [
     viewItems.concat([
       item('Toggle Full Screen', 'F11', () => toggleFullscreen(getWin())),
       item('Toggle Developer Tools', 'Alt+Command+I', () => toggleDevTools(getWin(), 'chrome')),
-      item('Toggle React DevTools', 'Alt+Command+J', () => toggleDevTools(getWin(), 'react')),
-      item('Toggle Redux DevTools', 'Alt+Command+K', () => toggleDevTools(getWin(), 'redux')),
+      item('Toggle Appx-Native DevTools', 'Alt+Command+J', () => toggleDevTools(getWin(), 'react')),
       separator,
       item('Zoom In', 'Command+=', () => zoom(getWin(), 1)),
       item('Zoom Out', 'Command+-', () => zoom(getWin(), -1)),
@@ -86,13 +85,10 @@ export default ({ iconPath }) => [
   ),
   menu('Help', [
     item('Documentation', n, () =>
-      shell.openExternal('https://github.com/jhen0409/react-native-debugger/tree/master/docs')
+      shell.openExternal('https://site.alipay.net/appx/af-appx-native/')
     ),
     item('Issues', n, () =>
-      shell.openExternal('https://github.com/jhen0409/react-native-debugger/issues')
-    ),
-    item('Open Collective', n, () =>
-      shell.openExternal('https://opencollective.com/react-native-debugger')
-    ),
+      shell.openExternal('http://gitlab.alipay-inc.com/appx/af-appx-native/issues')
+    )
   ]),
 ];

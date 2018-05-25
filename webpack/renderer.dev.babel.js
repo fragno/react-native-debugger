@@ -6,7 +6,7 @@ const port = 3000;
 
 const baseDevConfig = {
   ...baseConfig,
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: { host, port },
   output: {
     ...baseConfig.output,

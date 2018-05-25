@@ -33,7 +33,7 @@ export default (argv, cb) => {
   // Revert injection
   if (argv.revert) {
     const passMiddleware = revertMiddleware(modulePath);
-    const msg = 'Revert injection of React Native Debugger from React Native packager';
+    const msg = 'Revert injection of Appx Native Debugger from Appx Native packager';
     log(
       passMiddleware,
       msg + (!passMiddleware ? `, the file '${middlewarePath}' not found.` : '.')
@@ -43,7 +43,7 @@ export default (argv, cb) => {
 
   const inject = () => {
     const pass = injectMiddleware(modulePath);
-    const msg = 'Replace `open debugger-ui with Chrome` to `open React Native Debugger`';
+    const msg = 'Replace `open debugger-ui with Chrome` to `open Appx Native Debugger`';
     log(pass, msg + (pass ? '.' : `, the file '${middlewarePath}' not found.`));
     cb(pass);
   };

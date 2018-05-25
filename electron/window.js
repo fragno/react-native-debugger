@@ -91,7 +91,8 @@ export const createWindow = ({ iconPath, isPortSettingRequired }) => {
       win.openDevTools();
     }
     if (BrowserWindow.getAllWindows().length === 1) {
-      autoUpdate(iconPath);
+      // comment out, no need to update
+      // autoUpdate(iconPath);
     }
   });
   win.webContents.on('devtools-opened', async () => {

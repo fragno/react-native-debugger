@@ -14,7 +14,7 @@ function connectToRND(rndPath, log, cb) {
     if (log) {
       console.log(
         '\n[RNDebugger] The port file `$HOME/.rndebugger_port` not found\n' +
-          'Maybe the React Native Debugger (^0.3) is not open?\n' +
+          'Maybe the Appx Native Debugger is not open?\n' +
           '(Please visit https://github.com/jhen0409/react-native-debugger#installation)\n'
       );
     }
@@ -37,7 +37,7 @@ function connectToRND(rndPath, log, cb) {
     connection.on('end', () => {
       clearTimeout(timeoutId);
       if (!pass && log) {
-        console.log('\n[RNDebugger] Try to set port of React Native packager failed.\n');
+        console.log('\n[RNDebugger] Try to set port of Appx Native packager failed.\n');
       }
       cb(pass);
     });
@@ -52,7 +52,7 @@ export default ({ port }, cb) => {
     // This env is specified from Expo (and CRNA), we need avoid it included in rndebugger
     delete env.ELECTRON_RUN_AS_NODE;
     childProcess
-      .spawn('open', ['-g', '-a', 'React Native Debugger', rndPath], { env })
+      .spawn('open', ['-g', '-a', 'Appx Native Debugger', rndPath], { env })
       .once('close', code => {
         if (code > 0) {
           connectToRND(rndPath, false, pass => {
