@@ -21,7 +21,7 @@ import { toggleSyncState, isSyncState } from '../sync-state';
 
 const getWin = () => BrowserWindow.getFocusedWindow();
 const viewItems =
-  process.env.NODE_ENV === 'developemnt'
+  process.env.NODE_ENV === 'development'
     ? [item('Reload Window', 'Alt+CTRL+R', () => reload(getWin()))]
     : [];
 
