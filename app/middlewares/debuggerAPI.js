@@ -101,7 +101,6 @@ const connectToDebuggerProxy = async () => {
       return;
     }
     const object = JSON.parse(message.data);
-    console.log(JSON.stringify(object))
 
     if (object.$event === 'client-disconnected') {
       shutdownJSRuntime();
