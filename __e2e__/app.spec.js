@@ -89,7 +89,7 @@ describe('Application launch', () => {
     expect(val).toBe('');
   });
 
-  it('should show waiting message on Appx DevTools', async () => {
+  it('should show waiting message on Appx Native DevTools', async () => {
     const { client } = app;
     const exist = await client.isExisting('//h2[text()="Waiting for Appx to connect…"]');
     expect(exist).toBe(true);

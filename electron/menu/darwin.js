@@ -76,7 +76,7 @@ export default ({ iconPath }) => [
     viewItems.concat([
       item('Toggle Full Screen', 'F11', () => toggleFullscreen(getWin())),
       item('Toggle Developer Tools', 'Alt+Command+I', () => toggleDevTools(getWin(), 'chrome')),
-      item('Toggle Appx-Native DevTools', 'Alt+Command+J', () => toggleDevTools(getWin(), 'react')),
+      item('Toggle Appx Native DevTools', 'Alt+Command+J', () => toggleDevTools(getWin(), 'react')),
       separator,
       item('Zoom In', 'Command+=', () => zoom(getWin(), 1)),
       item('Zoom Out', 'Command+-', () => zoom(getWin(), -1)),

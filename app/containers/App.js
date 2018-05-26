@@ -132,7 +132,7 @@ export default class App extends Component {
     <div style={styles.wrapBackground}>
       <div style={styles.text}>
         <kbd style={styles.shortcut}>{`${shortcutPrefix}J`}</kbd>
-        {' to toggle Appx DevTools'}
+        {' to toggle Appx Native DevTools'}
       </div>
     </div>
   );

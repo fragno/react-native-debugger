@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "productName": "Appx Native Debugger In Dev",
   "description":
-    "The standalone app for Appx Native Debugger, with Appx DevTools",
+    "The standalone app for Appx Native Debugger, with Appx Native DevTools",
   "main": "electron/main.js",
   "scripts": {
     "pack-macos": "npm run build && ./scripts/package-macos.sh",
