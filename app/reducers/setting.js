@@ -2,7 +2,7 @@ import { TOGGLE_DEVTOOLS, RESIZE_DEVTOOLS, CHANGE_DEFAULT_THEME } from '../actio
 
 const initialState = {
   react: true,
-  redux: true,
+  redux: false,
   size: 0.6,
   themeName: null,
 };
